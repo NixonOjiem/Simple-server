@@ -3,8 +3,18 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
   
+  let dataArray = [
+    {id: 1, name: 'John', age: 25},
+    {id: 2, name: 'Jane', age: 30},
+    {id: 3, name: 'Bob', age: 35},
+    {id: 4, name: "Nicko", age: 27}
+  ];
+  // return results from API
+  res.json({
+    message: 'Users listing',
+    data: dataArray
+  });
 });
 
 module.exports = router;

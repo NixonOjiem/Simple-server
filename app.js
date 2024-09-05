@@ -6,8 +6,12 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var cors = require('cors');
 
 var app = express();
+
+//this is where the react app will run in order to call the API
+app.use(cors({origin: "http://localhost:3001"}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
