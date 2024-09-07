@@ -16,6 +16,7 @@ router.get('/', function(req, res, next) {
     message: 'Users listing',
     data: dataArray
   });
+  
 });
 
 module.exports = router;
